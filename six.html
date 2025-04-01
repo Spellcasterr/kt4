@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматные фигуры на фотографиях</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            padding: 20px;
+        }
+        
+        .square {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .square img.background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .square:hover img.background {
+            transform: scale(1.05);
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .piece {
+            width: 40%;
+            height: 40%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Квадрат 1 -->
+        <div class="square">
+            <img class="background" src="https://v1rt.ru/upload/medialibrary/52c/52c2f450ce6738efce571eee15c340d6.jpg" alt="Шахматы">
+            <div class="overlay">
+                <img class="piece" src="https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wk.png" alt="Белый король">
+            </div>
+        </div>
+        
+        <!-- Квадрат 2 (исправленный) -->
+        <div class="square">
+            <img class="background" src="https://e-notabene.ru/generated/36456/index.files/image004.jpg" alt="Шахматная доска">
+            <div class="overlay">
+                <img class="piece" src="https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bq.png" alt="Чёрный ферзь">
+            </div>
+        </div>
+        
+        <!-- Квадрат 3 -->
+        <div class="square">
+            <img class="background" src="https://i.pinimg.com/736x/78/14/5b/78145b11de1051273efe6fde26a856ae.jpg" alt="Игра">
+            <div class="overlay">
+                <img class="piece" src="https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wr.png" alt="Белая ладья">
+            </div>
+        </div>
+        
+        <!-- Квадрат 4 -->
+        <div class="square">
+            <img class="background" src="https://i.pinimg.com/736x/4f/75/52/4f7552534c0b7f816e257fe3e38e984b.jpg" alt="Турнир">
+            <div class="overlay">
+                <img class="piece" src="https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bn.png" alt="Чёрный конь">
+            </div>
+        </div>
+        
+        <!-- Квадрат 5 -->
+        <div class="square">
+            <img class="background" src="https://i.pinimg.com/736x/1e/68/87/1e6887a42d099a2f26d2946a83984749.jpg" alt="Стратегия">
+            <div class="overlay">
+                <img class="piece" src="https://images.chesscomfiles.com/chess-themes/pieces/neo/150/wb.png" alt="Белый слон">
+            </div>
+        </div>
+        
+        <!-- Квадрат 6 -->
+        <div class="square">
+            <img class="background" src="https://i.pinimg.com/736x/d2/15/6f/d2156fb70282a77d6d4c223f90bae898.jpg" alt="Размышление">
+            <div class="overlay">
+                <img class="piece" src="https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bp.png" alt="Чёрная пешка">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
